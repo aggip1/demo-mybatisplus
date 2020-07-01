@@ -42,6 +42,6 @@ public class AdminRepositoryTest {
         List<Admin> admins = adminRepository.selectList(null);
         PageInfo<Admin> adminPageInfo = new PageInfo<>(admins);
         System.out.println("adminPageInfo = " + adminPageInfo);
-
+        System.out.println("修改代码？？？？？");
     }
 }
