@@ -10,6 +10,8 @@ public class DemoMybatisplusApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DemoMybatisplusApplication.class, args);
+        System.out.println("代码修改中......");
+
     }
 
 }
