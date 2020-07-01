@@ -12,6 +12,7 @@ public class DemoMybatisplusApplication {
         SpringApplication.run(DemoMybatisplusApplication.class, args);
         System.out.println("!!!!!!!......");
         System.out.println("？？？？？？");
+        System.out.println("不要");
     }
 
 }
