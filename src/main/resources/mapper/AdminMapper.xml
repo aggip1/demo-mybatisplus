@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ag.repository.AdminRepository">
+    <resultMap id="test1" type="com.ag.entity.Admin">
+        <id column="a_id" property="id"/>
+        <result column="a_username" property="username"/>
+        <result column="a_password" property="password"/>
+        <collection ofType="Order" property="orders">
+            <id column="o.id" property="id"/>
+            <result column="o_orderName" property="orderName"/>
+        </collection>
+    </resultMap>
+    <select id="findOne" resultType="com.ag.entity.Admin">
+        SELECT *
+	        FROM admin where USERNAME=#{name} and PASSWORD !='' limit 1
+    </select>
+    <select id="testResultMap" resultMap="test1">
+        select a.PASSWORD as a_password,a.ID as a_id,a.USERNAME as a_username,
+        o.id as o_id , o.order_name as o_orderName
+        from admin a inner join order1 o on a.id=o.admin_id where o.admin_id=#{id}
+    </select>
+</mapper>

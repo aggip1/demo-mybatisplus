@@ -8,3 +8,8 @@ spring:
 logging:
   level:
     com.ag.repository: debug
+mybatis-plus:
+  type-aliases-package: com.ag.entity
+  mapper-locations: classpath:mapper/*.xml
+init:
+  app: 1

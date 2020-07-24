@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ag.repository.OrderRepository">
+    <sql id="ls">
+        id as id ,order_id as orderId,order_name as orderName,admin_id as adminId
+    </sql>
+    <select id="findAll" resultType="com.ag.entity.Order">
+        select <include refid="ls"/> from order1
+    </select>
+</mapper>

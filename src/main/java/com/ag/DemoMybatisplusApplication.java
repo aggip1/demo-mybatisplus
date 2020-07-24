@@ -10,6 +10,9 @@ public class DemoMybatisplusApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DemoMybatisplusApplication.class, args);
+        System.out.println("!!!!!!!......");
+        System.out.println("？？？？？？");
+        System.out.println("不要");
     }
 
 }

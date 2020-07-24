@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -28,4 +29,8 @@ public class Admin implements Serializable {
   @TableField("OTHER")//密码
   private String other;       //其他
 
+  @TableField(exist = false)
+  private List<Order> orders;
+  @TableField(exist = false)
+  private Boolean isLast;
 }
