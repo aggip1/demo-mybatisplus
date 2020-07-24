@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.github.pagehelper.util.StringUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,5 +44,12 @@ public class AdminRepositoryTest {
         PageInfo<Admin> adminPageInfo = new PageInfo<>(admins);
         System.out.println("adminPageInfo = " + adminPageInfo);
         System.out.println("修改代码？？？？？");
+    }
+    @Test
+    public void test48(){
+        String s = "6";
+        boolean notEmpty = StringUtil.isNotEmpty(s);
+        System.out.println(notEmpty);
+
     }
 }
